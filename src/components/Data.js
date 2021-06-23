@@ -34,11 +34,10 @@ function recursion(children, i) {
   i++;
   var childobj = [];
   children.forEach((child) => {
-    var string = "";
-    var j = 0;
-    for (j = 0; j < i; j++) string += "--";
-    string += ">";
-
+    // var string = "";
+    // var j = 0;
+    // for (j = 0; j < i; j++) string += "--";
+    // string += ">";
     if (child.selected === 1) {
       var children = {};
       //   console.log(string, child.name);
