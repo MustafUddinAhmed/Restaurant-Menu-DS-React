@@ -8,10 +8,10 @@ export const fetchDemo = (body) => {
     obj.childName = [];
 
     element.menu.forEach((mymenu) => {
-      if (mymenu.type == "sectionheader") {
+      if (mymenu.type === "sectionheader") {
         mymenu.children.forEach((child) => {
-          if (child.type == "item") {
-            if (child.selected == 1) {
+          if (child.type === "item") {
+            if (child.selected === 1) {
               var childobj = {};
               //   console.log("-->", child.name);
               childobj.name = child.name;
@@ -30,7 +30,7 @@ export const fetchDemo = (body) => {
 
 function recursion(children, i) {
   if (!children) return;
-  if (children == undefined) return;
+  if (children === undefined) return;
   i++;
   var childobj = [];
   children.forEach((child) => {
@@ -38,7 +38,8 @@ function recursion(children, i) {
     var j = 0;
     for (j = 0; j < i; j++) string += "--";
     string += ">";
-    if (child.selected == 1) {
+
+    if (child.selected === 1) {
       var children = {};
       //   console.log(string, child.name);
       children.name = child.name;
